@@ -14,7 +14,6 @@ ALLOWED_HOSTS = config(
     cast=lambda variable: variable.split(',')
 )
 
-
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -24,7 +23,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -37,7 +35,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'config.urls'
-
 
 TEMPLATES = [
     {
@@ -57,7 +54,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
 # Database
 DATABASES = {
     'default': {
@@ -65,7 +61,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -92,7 +87,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 LANGUAGE_CODE = config('LANGUAGE_CODE', default='en-us')
 
@@ -102,9 +96,16 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'assets',
+]
+
+STATIC_ROOT = BASE_DIR / '..' / 'static'
+STATIC_URL = '/static/'
+
+MEDIA_ROOT = BASE_DIR / '..' / 'media'
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
