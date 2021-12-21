@@ -5,6 +5,21 @@ from typing import Any, Dict, List, Union
 
 from django.conf import settings
 from django.template.loader import render_to_string
+
+
+def read_json_file(
+    src_path: Path
+) -> Union[Dict[str, Any], List[Dict[str, Any]]]:
+    """Reads json file and returns either python dict or python list."""
+    if not src_path.exists():
+        raise ValueError(
+            'Provided json file does not exist!'
+        )
+
+    json_string = src_path.read_text()
+    return json.loads(json_string)
+
+
 def render_to_file(
     template_name: str,
     target_dir: Path,
