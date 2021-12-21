@@ -1,0 +1,106 @@
+# Django stuff:
+*.log
+*.pot
+sent-emails/
+
+# sqlite3
+*.sqlite3
+*.sqlite3-journal
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyc
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.tox
+nosetests.xml
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Complexity
+output/*.html
+output/*/index.html
+
+# Sphinx
+docs/_build
+
+.webassets-cache
+
+# Virtualenvs
+env
+env*
+venv
+
+# intellij
+*.ipr
+*.iml
+*.iws
+
+.DS_Store
+
+# node
+node_modules/
+
+# bower packages
+sample_blog/assets-src/vendor/
+.sass-cache/
+
+# env files
+*.env
+
+# media
+media/
+
+# libsass
+*.libsass.json
+
+# pytest
+.pytest_cache
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+*.jsbeautifyrc
+
+# Pycharm
+.idea/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# pyright
+pyrightconfig.json
