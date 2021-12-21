@@ -104,3 +104,6 @@ media/
 
 # pyright
 pyrightconfig.json
+
+# project
+html-src/
